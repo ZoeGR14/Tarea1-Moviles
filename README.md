@@ -1,2 +1,7 @@
-# Tarea1-Moviles
-Objetivo: Crear una aplicación Android que demuestre el uso de Activities y Fragments para explicar diferentes elementos de interfaz de usuario.
+# Tarea 1. Elementos Básicos de Interfaz de Usuario
+
+## Descripción de la Aplicación
+
+## Instrucciones de Uso
+
+## Instalación
