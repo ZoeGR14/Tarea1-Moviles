@@ -14,6 +14,7 @@ import android.widget.RadioGroup
 import android.widget.ScrollView
 import android.widget.Toast
 import android.widget.ToggleButton
+import androidx.core.content.ContextCompat
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.switchmaterial.SwitchMaterial
@@ -107,9 +108,9 @@ class SelectionElementsFragment : Fragment() {
 
         toggleButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                layout.setBackgroundColor(Color.parseColor("#E5E6C9"))
+                layout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.light2))
             } else {
-                layout.setBackgroundColor(Color.parseColor("#F8F8EC"))
+                layout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.light))
 
             }
         }

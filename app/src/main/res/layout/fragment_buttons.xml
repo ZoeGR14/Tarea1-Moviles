@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F8F8EC"
+    android:background="@color/light"
     tools:context=".ButtonsFragment">
 
     <LinearLayout
@@ -25,6 +25,7 @@
             android:layout_marginBottom="8dp"
             android:textColor="@color/black"
             android:text="Botones de Acción" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#8BA6AC"
+            android:backgroundTint="@color/main"
             android:textColor="@color/white"
             android:text="BOTÓN NORMAL" />
 
@@ -48,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:backgroundTint="#8BA6AC"
+            android:backgroundTint="@color/main"
             android:src="@drawable/accion" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -56,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:backgroundTint="#8BA6AC"
+            android:backgroundTint="@color/main"
             android:focusable="true"
             app:tint="#F8F8EC"
             android:src="@android:drawable/ic_menu_info_details"

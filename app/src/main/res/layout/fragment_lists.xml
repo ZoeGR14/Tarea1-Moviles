@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F8F8EC"
+    android:background="@color/light"
     tools:context=".ListsFragment">
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,6 +22,41 @@
             android:layout_marginBottom="8dp"
             android:textColor="@color/black"
             android:text="Listas (RecyclerView)" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Muestran grandes colecciones de datos de forma eficiente, reciclando las vistas de la memoria a medida que el usuario hace scroll." />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Escribe un nuevo elemento"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#98000000" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#8BA6AC"
+            android:textColor="@color/white"
+            android:text="Agregar a lista" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
 
     </LinearLayout>
 </ScrollView>
