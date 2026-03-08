@@ -31,6 +31,8 @@ class ListsFragment : Fragment() {
         val dataset = mutableListOf<String>()
         val adapter = CustomAdapter(dataset)
 
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
 
         btnAdd.setOnClickListener {
             val txt = editText.text.toString()
@@ -44,8 +46,7 @@ class ListsFragment : Fragment() {
             }
         }
 
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = adapter
+
     }
 }
 
@@ -60,6 +61,10 @@ class CustomAdapter(private val dataSet: MutableList<String>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView.text = dataSet[position]
+
+        holder.textView.setOnClickListener {
+            Toast.makeText(holder.textView.context, "Has seleccionado: ${dataSet[position]}", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun getItemCount() = dataSet.size
