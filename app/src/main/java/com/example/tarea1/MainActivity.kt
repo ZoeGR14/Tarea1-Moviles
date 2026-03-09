@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
                 3 -> "Listas"
                 else -> "Elementos de Información"
             }
+            tab.setIcon(when(position) {
+                0 -> android.R.drawable.ic_menu_edit
+                1 -> android.R.drawable.ic_menu_send
+                2 -> android.R.drawable.ic_menu_agenda
+                3 -> android.R.drawable.ic_menu_sort_by_size
+                else -> android.R.drawable.ic_menu_info_details
+            })
         }.attach()
 
     }

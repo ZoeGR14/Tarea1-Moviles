@@ -18,7 +18,6 @@ class ListsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_lists, container, false)
     }
 
@@ -45,8 +44,6 @@ class ListsFragment : Fragment() {
                 Toast.makeText(requireContext(), "Ingresa un texto", Toast.LENGTH_SHORT).show()
             }
         }
-
-
     }
 }
 
@@ -61,8 +58,9 @@ class CustomAdapter(private val dataSet: MutableList<String>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.textView.text = dataSet[position]
+        holder.txtNumber.text = "${position + 1}"
 
-        holder.textView.setOnClickListener {
+        holder.itemView.setOnClickListener {
             Toast.makeText(holder.textView.context, "Has seleccionado: ${dataSet[position]}", Toast.LENGTH_SHORT).show()
         }
     }
@@ -72,4 +70,5 @@ class CustomAdapter(private val dataSet: MutableList<String>) :
 
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val textView: TextView = view.findViewById(R.id.txtList)
+    val txtNumber: TextView = view.findViewById(R.id.txtNumber)
 }

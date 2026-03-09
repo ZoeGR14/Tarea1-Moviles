@@ -43,11 +43,10 @@ class InformationFragment : Fragment() {
             runnable = object : Runnable {
                 override fun run() {
                     if (progreso < 100) {
-                        progreso += 5 // Incrementos más pequeños para suavidad
-                        progressBar.setProgress(progreso, true) // Animación suave (API 24+)
+                        progreso += 5
+                        progressBar.setProgress(progreso, true)
                         txtProgress.text = "Progreso: $progreso%"
-                        
-                        // Simular velocidad variable
+
                         val delay = (200..800).random().toLong()
                         handler.postDelayed(this, delay)
                     } else {
@@ -58,7 +57,7 @@ class InformationFragment : Fragment() {
                     }
                 }
             }
-            
+
             handler.postDelayed(runnable, 500)
         }
     }

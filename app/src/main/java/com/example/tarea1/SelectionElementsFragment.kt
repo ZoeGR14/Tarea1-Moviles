@@ -1,6 +1,5 @@
 package com.example.tarea1
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
-import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.ScrollView
@@ -25,7 +23,6 @@ class SelectionElementsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_selection_elements, container, false)
     }
 
@@ -48,7 +45,6 @@ class SelectionElementsFragment : Fragment() {
         val switch1 = view.findViewById<SwitchMaterial>(R.id.switch1)
         val switch2 = view.findViewById<SwitchMaterial>(R.id.switch2)
         val btnSwitch = view.findViewById<Button>(R.id.btnSwitch)
-
 
         btnChip.setOnClickListener {
             val checkedChips = chipGroup.getCheckedChipIds()
@@ -81,7 +77,7 @@ class SelectionElementsFragment : Fragment() {
                 bool = true
             }
 
-            if (bool === false) {
+            if (bool == false) {
                 Toast.makeText(
                     requireContext(),
                     "No se han seleccionado opciones",
@@ -89,7 +85,6 @@ class SelectionElementsFragment : Fragment() {
                 ).show()
             } else {
                 Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
-
             }
         }
 
@@ -97,7 +92,8 @@ class SelectionElementsFragment : Fragment() {
             val selectedId = radioGroup.checkedRadioButtonId
             val radio = view.findViewById<RadioButton>(selectedId)
             if (radio == null) {
-                Toast.makeText(requireContext(), "No se ha seleccionado ninguna opción", Toast.LENGTH_SHORT).show() } else {
+                Toast.makeText(requireContext(), "No se ha seleccionado ninguna opción", Toast.LENGTH_SHORT).show()
+            } else {
                 Toast.makeText(
                     requireContext(),
                     "Opción seleccionada: " + radio.text,
@@ -111,30 +107,14 @@ class SelectionElementsFragment : Fragment() {
                 layout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.light2))
             } else {
                 layout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.light))
-
             }
         }
 
         btnSwitch.setOnClickListener {
-            var text = "Opciones seleccionadas: "
-            var bool = false
-            if (switch1.isChecked) {
-                text = text + switch1.text + ", "
-                bool = true
-            }
-            if (switch2.isChecked) {
-                text = text + switch2.text
-                bool = true
-            }
+            val text = "Activar Wi-Fi: " + (if (switch1.isChecked) "ON" else "OFF") +
+                    "\nActivar Bluetooth: " + (if (switch2.isChecked) "ON" else "OFF")
+            Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
 
-            if (bool === false) {
-                Toast.makeText(
-                    requireContext(),
-                    "No se han seleccionado opciones",
-                    Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
-            }
         }
     }
 }
