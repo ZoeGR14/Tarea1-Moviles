@@ -54,8 +54,8 @@ Aplicación Android educativa que demuestra los **elementos fundamentales de int
 - `Switch (Material)` para Wifi/Bluetooth
 <details>
   <summary><strong>📸 Ver capturas </strong></summary>
-  <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/cb06309e-ecf2-4fb5-8436-3a9828382042" />
-  <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/20d1e680-020a-4414-b5bf-4d4e93e0c04e" />
+  <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/60cf6182-9089-401d-9d0d-4843e930ad79" />
+  <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/8151aeb0-2fe5-4704-803d-e005aa9b2a1f" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/17e0c93b-3405-45c6-b48e-b8f3656aa157" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/1e1284cf-7fde-48c7-a945-6e9d7f8ba617" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/10fc11cb-5519-4ce5-97cc-a1b7e121227d" />
