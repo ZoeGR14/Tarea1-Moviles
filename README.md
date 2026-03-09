@@ -39,6 +39,7 @@ Aplicación Android educativa que demuestra los **elementos fundamentales de int
 - `FloatingActionButton` (FAB) con ícono
 <details>
   <summary><strong>📸 Ver capturas </strong></summary>
+  <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/bca0f2e0-5fd5-40d2-9f85-b2b2149e2253" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/907e2783-c5b8-45be-8096-a9ed743e0a04" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/6689be71-c126-47d1-b0f4-2c4b915ff357" />
   <img width="270" height="600" alt="image" src="https://github.com/user-attachments/assets/58529450-5ae2-4dc9-ba84-29132d056e08" />
